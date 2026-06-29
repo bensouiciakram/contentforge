@@ -6,6 +6,7 @@ import { CreditCounter } from '@/features/dashboard/components/credit-counter'
 import { ResetDate } from '@/features/dashboard/components/reset-date'
 import { UpgradePrompt } from '@/features/dashboard/components/upgrade-prompt'
 import { TIERS } from '@/features/billing/lib/config'
+import { RecentPosts } from '@/features/dashboard/components/recent-posts'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -57,6 +58,7 @@ export default async function DashboardPage() {
           </a>
         </main>
       </CreditGate>
+      <RecentPosts />
     </div>
   )
 }
