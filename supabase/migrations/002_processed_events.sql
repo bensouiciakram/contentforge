@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS processed_events (
+  id TEXT PRIMARY KEY,
+  processed_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE processed_events ENABLE ROW LEVEL SECURITY;
